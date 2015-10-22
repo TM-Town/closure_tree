@@ -10,19 +10,19 @@ module ClosureTree
     end
 
     def _ct_reorder_prior_siblings_if_parent_changed
-      if attribute_changed?(_ct.parent_column_name) && !@was_new_record
-        was_parent_id = attribute_was(_ct.parent_column_name)
-        _ct.reorder_with_parent_id(was_parent_id)
-      end
+      # if attribute_changed?(_ct.parent_column_name) && !@was_new_record
+      #   was_parent_id = attribute_was(_ct.parent_column_name)
+      #   _ct.reorder_with_parent_id(was_parent_id)
+      # end
     end
 
     def _ct_reorder_siblings(minimum_sort_order_value = nil)
-      _ct.reorder_with_parent_id(_ct_parent_id, minimum_sort_order_value)
-      reload unless destroyed?
+      # _ct.reorder_with_parent_id(_ct_parent_id, minimum_sort_order_value)
+      # reload unless destroyed?
     end
 
     def _ct_reorder_children(minimum_sort_order_value = nil)
-      _ct.reorder_with_parent_id(_ct_id, minimum_sort_order_value)
+      # _ct.reorder_with_parent_id(_ct_id, minimum_sort_order_value)
     end
 
     def self_and_descendants_preordered
