@@ -61,9 +61,9 @@ module ClosureTree
         if minimum_sort_order_value
           scope = scope.where("#{quoted_order_column} >= #{minimum_sort_order_value}")
         end
-        scope.each_with_index do |ea, idx|
-          ea.update_order_value(idx + minimum_sort_order_value.to_i)
-        end
+        # scope.each_with_index do |ea, idx|
+        #   ea.update_order_value(idx + minimum_sort_order_value.to_i)
+        # end
       end
     end
   end
